@@ -6,6 +6,11 @@ export function cli(args) {
     const commitMessage = args[2];
     const currentBranchName = branchName();
 
+    if (!currentBranchName) {
+        console.error(`⛔Branch not found. Please, check your branch.⛔`);
+        return;
+    }
+
     if (!commitMessage) {
         console.error(`⛔It's difficult to know what you changed. Please, add a commit message.⛔`);
         return;
@@ -24,5 +29,7 @@ Please, create a feature branch and use a PULL Request.⛔`);
 
 function standardCommitMessage(branchName, commitMessage) {
     return `#${branchName}
+    
+    
 ${commitMessage}`;
 }
