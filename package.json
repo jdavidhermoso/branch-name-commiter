@@ -1,6 +1,6 @@
 {
   "name": "branch-name-commiter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for commit  using git branch name as commit  message prefix",
   "main": "src/index.js",
   "scripts": {
